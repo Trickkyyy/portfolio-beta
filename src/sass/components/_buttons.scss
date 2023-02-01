@@ -25,12 +25,8 @@
 .cta-btn--hero {
   @include supportColorForIE11();
   border: 2px solid transparent;
-  border-image: linear-gradient(
-    135deg,
-    $primary-color 0%,
-    $secondary-color 100%
-  );
-  border-image-slice: 1;
+  border-color: $secondary-color;
+  
   @include supportIE11() {
     color: $secondary-color !important;
     &:hover {
@@ -63,25 +59,6 @@
     @include respond(phone) {
       -webkit-text-fill-color: $secondary-color;
     }
-
-    &::after {
-      width: 100%;
-    }
-  }
-}
-
-/* Resume Style */
-.cta-btn--resume {
-  color: $white-color;
-  border: 2px solid $white-color;
-
-  &::after {
-    background: $white-color;
-  }
-
-  &:hover {
-    color: $secondary-color;
-    text-decoration: none;
 
     &::after {
       width: 100%;
